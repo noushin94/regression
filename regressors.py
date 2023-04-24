@@ -48,3 +48,10 @@ MLP_R.fit(Xtrain, Ytrain)
 pred = MLP_R.predict(Xtest)
 
 print(mean_squared_error(Ytest,pred))
+
+#SVM
+SV_R = SVR(kernel='rbf', C=1.2)
+SV_R.fit(Xtrain, Ytrain)
+pred = SV_R.predict(Xtest)
+
+print(mean_squared_error(Ytest,pred))
