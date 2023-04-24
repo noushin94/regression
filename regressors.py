@@ -33,3 +33,10 @@ KNN_R.fit(Xtrain, Ytrain)
 pred = KNN_R.predict(Xtest)
 
 print(mean_squared_error(Ytest,pred))
+
+#Decision TRee
+DT_R = DecisionTreeRegressor(criterion='absolute_error', max_depth=5, min_samples_split=7, min_samples_leaf=2, random_state=2)
+DT_R.fit(Xtrain, Ytrain)
+pred = DT_R.predict(Xtest)
+
+print(mean_squared_error(Ytest,pred))
