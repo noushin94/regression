@@ -26,3 +26,10 @@ KNN = KNeighborsRegressor(n_neighbors=5, weights='uniform', n_jobs=3)
 KNN.fit(Xtrain, Ytrain)
 pred = KNN.predict(Xtest)
 pred
+
+#MSE
+KNN_R = KNeighborsRegressor(n_neighbors=5, weights='uniform', n_jobs=3)
+KNN_R.fit(Xtrain, Ytrain)
+pred = KNN_R.predict(Xtest)
+
+print(mean_squared_error(Ytest,pred))
