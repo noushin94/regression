@@ -63,3 +63,6 @@ REG.fit(Xtrain, Ytrain)
 pred = REG.predict(Xtest)
 
 print(mean_squared_error(Ytest,pred))
+
+#weight
+REG.coef_
