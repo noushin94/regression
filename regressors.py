@@ -20,3 +20,9 @@ from sklearn.linear_model import LinearRegression
 
 #spliting test and train
 Xtrain, Xtest, Ytrain, Ytest = train_test_split(X, Y, test_size=0.25, random_state=22)
+
+#KNN resgressor
+KNN = KNeighborsRegressor(n_neighbors=5, weights='uniform', n_jobs=3)
+KNN.fit(Xtrain, Ytrain)
+pred = KNN.predict(Xtest)
+pred
