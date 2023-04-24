@@ -49,9 +49,17 @@ pred = MLP_R.predict(Xtest)
 
 print(mean_squared_error(Ytest,pred))
 
-#SVM
+#SVM,SVR
 SV_R = SVR(kernel='rbf', C=1.2)
 SV_R.fit(Xtrain, Ytrain)
 pred = SV_R.predict(Xtest)
+
+print(mean_squared_error(Ytest,pred))
+
+#linear regression
+from sklearn.linear_model import LinearRegression
+REG = LinearRegression(fit_intercept=True, n_jobs=3)
+REG.fit(Xtrain, Ytrain)
+pred = REG.predict(Xtest)
 
 print(mean_squared_error(Ytest,pred))
