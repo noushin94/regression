@@ -40,3 +40,11 @@ DT_R.fit(Xtrain, Ytrain)
 pred = DT_R.predict(Xtest)
 
 print(mean_squared_error(Ytest,pred))
+
+#neural network
+MLP_R = MLPRegressor(max_iter=200, random_state=2020, activation='relu', hidden_layer_sizes=(10,20),
+                    learning_rate_init=0.01, learning_rate='invscaling')
+MLP_R.fit(Xtrain, Ytrain)
+pred = MLP_R.predict(Xtest)
+
+print(mean_squared_error(Ytest,pred))
