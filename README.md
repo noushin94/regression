@@ -1,2 +1,2 @@
 # regression
- evaluating different regressors and their MSE
+ evaluating different regressors and their MSEs
